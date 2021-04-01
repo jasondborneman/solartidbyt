@@ -11,10 +11,10 @@ Works with the SolarEdge inverters via the [SolarEdge API](https://www.solaredge
 
 ## Data Conversions
 ### kWh -> CO2
-The KWh to CO2 conversion is calculated as 0.92 pounds of CO2 per KWh as seen via the [U.S. Energy Information Administration FAQ](https://www.eia.gov/tools/faqs/faq.php?id=74&t=11).
+The KWh to CO2 conversion is calculated as 0.92 pounds of CO2 per KWh as seen via the [U.S. Energy Information Administration FAQ](https://www.eia.gov/tools/faqs/faq.php?id=74&t=11). Then multiply that by 0.000453592 to get Metric Tons [per Google](https://www.google.com/search?q=convert+pounds+to+metric+tons&oq=convert+pounds+to+metric+tons&aqs=chrome..69i57j0l2j0i22i30l7.4026j1j7&sourceid=chrome&ie=UTF-8).
 
 ### CO2 -> Acres of Trees
-The Pounds of CO2 to Acres of Trees conversion is calculated as 0.77 metric tons of CO2 absorbed per acre per year as seen via the [EPA Greenhouse Gases Equivalencies Calculator - Calculations and References](https://www.epa.gov/energy/greenhouse-gases-equivalencies-calculator-calculations-and-references). 
+The CO2 to Acres of Trees conversion is calculated as 0.77 metric tons of CO2 absorbed per acre per year as seen via the [EPA Greenhouse Gases Equivalencies Calculator - Calculations and References](https://www.epa.gov/energy/greenhouse-gases-equivalencies-calculator-calculations-and-references). 
 
 I'm a little worried I have this calculation wrong. 
 My calculation is...
