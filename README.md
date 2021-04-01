@@ -1,5 +1,5 @@
 # SolarTidbyt
-Works with the SolarEdge inverters via the [SolarEdge API](https://www.solaredge.com/sites/default/files//se_monitoring_api.pdf), specifically the Overview API.
+Works with the SolarEdge inverters via the [SolarEdge API](https://www.solaredge.com/sites/default/files//se_monitoring_api.pdf), specifically the Overview and Site Info APIs, to display information on a [Tidbyt](https://www.kickstarter.com/projects/tidbyt/retro-display)
 
 ## Data Shown
 * Lifetime energy produced in kWh
@@ -27,3 +27,6 @@ I think
 
 ## Deploying to your Tidbyt
 _This will be filled out once I have a Tidbyt and know how to do this...._
+
+### SolarEdge data on Twitter?
+See my other project, [solar3](https://github.com/jasondborneman/solar3)!
