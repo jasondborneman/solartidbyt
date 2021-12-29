@@ -2,8 +2,8 @@ load("render.star", "render")
 load("http.star", "http")
 load("encoding/base64.star", "base64")
 
-SOLAR_API_KEY = "700BGF1J0N044NQ8N8QQE7PJCTC9EQ94"
-SOLAR_SITE_ID = "1428206"
+SOLAR_API_KEY = <"SOLAR API KEY">
+SOLAR_SITE_ID = <"SITE ID">
 
 SOLAR_SITE_OVERVIEW_URL = "https://monitoringapi.solaredge.com/site/%s/overview?api_key=%s" % (SOLAR_SITE_ID, SOLAR_API_KEY)
 SOLAR_SITE_INFO_URL = "https://monitoringapi.solaredge.com/site/%s/details.json?api_key=%s" % (SOLAR_SITE_ID, SOLAR_API_KEY)
