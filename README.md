@@ -5,6 +5,7 @@ Works with the SolarEdge inverters via the [SolarEdge API](https://www.solaredge
 * Current energy generating in Watts
 * Metric Tons of C02 equivalent
 * Acres of forest to absorb that amount of Co2
+* Blank frame [to get around an [issue when published to a Tidbyt](https://discuss.tidbyt.com/t/entire-webp-file-loop-not-publishing-to-tidbyt/1336/5) that the last frame is truncated from displaying.]
 
 ### Example Display
 ![Example of Tidbyt output](solarinfo.webp)

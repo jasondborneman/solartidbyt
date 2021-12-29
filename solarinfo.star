@@ -162,6 +162,16 @@ def main():
                             )
                         ],
                     ),
+                    render.Column(
+                        main_align="space_around", # Controls horizontal alignment
+                        cross_align="center", # Controls vertical alignment
+                        children = [
+                            render.Box(
+                                        width = 16,
+                                        height = 16,
+                            )
+                        ],
+                    ),
                 ]
             )
         ),
