@@ -2,8 +2,8 @@ load("render.star", "render")
 load("http.star", "http")
 load("encoding/base64.star", "base64")
 
-SOLAR_API_KEY = "<SOLAR EDGE API KEY>"
-SOLAR_SITE_ID = "<SOLAR EDGE SITE ID>"
+SOLAR_API_KEY = "700BGF1J0N044NQ8N8QQE7PJCTC9EQ94"
+SOLAR_SITE_ID = "1428206"
 
 SOLAR_SITE_OVERVIEW_URL = "https://monitoringapi.solaredge.com/site/%s/overview?api_key=%s" % (SOLAR_SITE_ID, SOLAR_API_KEY)
 SOLAR_SITE_INFO_URL = "https://monitoringapi.solaredge.com/site/%s/details.json?api_key=%s" % (SOLAR_SITE_ID, SOLAR_API_KEY)
@@ -80,7 +80,7 @@ def main():
     print ("Tree Acres: %s" % tree_acres)
 
     return render.Root(
-        delay = 5000,
+        delay = 2500,
         child = render.Box( # This Box exists to provide vertical centering
             render.Animation(
                 children = [
