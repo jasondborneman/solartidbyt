@@ -2,12 +2,12 @@
 Works with the SolarEdge inverters via the [SolarEdge API](https://www.solaredge.com/sites/default/files//se_monitoring_api.pdf), specifically the Overview and Site Info APIs, to display information on a [Tidbyt](https://www.kickstarter.com/projects/tidbyt/retro-display)
 
 ## Data Shown
-* Lifetime energy produced in kWh
-* Pounds of C02 equivalent
+* Current energy generating in Watts
+* Metric Tons of C02 equivalent
 * Acres of forest to absorb that amount of Co2
 
 ### Example Display
-![Example of Tidbyt output](example.webp)
+![Example of Tidbyt output](solarinfo.webp)
 
 ## Data Conversions
 ### kWh -> CO2
@@ -30,7 +30,7 @@ I'm running a cron job on a Raspberry Pi that calls a script. The script does th
 1. Runs `$ pixlet render solarlife.star`
 2. Runs `$ pixlet push ......`
 
-This is run once a day at midnight to update the image on the Tidbyt. Once a day is good enough for this application since it's just showing lifetime totals. 
+Running once every 5 minutes so that current data generation is relatively up to date.
 
 ### SolarEdge data on Twitter?
 See my other project, [solar3](https://github.com/jasondborneman/solar3)!

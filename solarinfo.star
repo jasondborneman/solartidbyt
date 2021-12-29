@@ -2,8 +2,8 @@ load("render.star", "render")
 load("http.star", "http")
 load("encoding/base64.star", "base64")
 
-SOLAR_API_KEY = <"SOLAR API KEY">
-SOLAR_SITE_ID = <"SITE ID">
+SOLAR_API_KEY = "<SOLAR API KEY>"
+SOLAR_SITE_ID = "<SOLAR SITE ID>"
 
 SOLAR_SITE_OVERVIEW_URL = "https://monitoringapi.solaredge.com/site/%s/overview?api_key=%s" % (SOLAR_SITE_ID, SOLAR_API_KEY)
 SOLAR_SITE_INFO_URL = "https://monitoringapi.solaredge.com/site/%s/details.json?api_key=%s" % (SOLAR_SITE_ID, SOLAR_API_KEY)
@@ -43,7 +43,16 @@ def main():
     print ("----Got Solar Overview----")
     resp_json = resp.json()
 
-    current_power = resp_json["overview"]["currentPower"]["power"]
+    # Get current power and only 1 significant digit
+    current_power = "%s" % (float(resp_json["overview"]["currentPower"]["power"]))
+    cp_split = current_power.split(".",1)
+    major_cp = cp_split[0]
+    # Yeah, I'n not rounding, just grabbing the first significant digit since Starlark doesn't seem to have a .round function
+    minor_cp = cp_split[1][0:1]
+    cp_s = "{maj}.{min}".format(maj=major_cp, min=minor_cp)
+    cp = float(cp_s)
+
+    # Get lifetime energy and only 1 significant digit
     lifetime_energy = "%s" % (float(resp_json["overview"]["lifeTimeData"]["energy"])/1000)
     # lifetime_energy = "11.0234567890"
     energy_split = lifetime_energy.split(".", 1)
@@ -100,7 +109,7 @@ def main():
                                     cross_align="center",
                                     children = [
                                         render.Row(
-                                            children = [render.Text("{} kWh".format(kwh))]
+                                            children = [render.Text("{}W".format(cp))]
                                         )
                                     ]
                                 )
@@ -123,7 +132,7 @@ def main():
                                     cross_align="center",
                                     children = [
                                         render.Row(
-                                            children = [render.Text("{} mt CO2".format(co2))]
+                                            children = [render.Text("{}mt CO2".format(co2))]
                                         )
                                     ]
                                 )
