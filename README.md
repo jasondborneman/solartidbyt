@@ -26,7 +26,11 @@ My calculation is...
 I think
 
 ## Deploying to your Tidbyt
-_This will be filled out once I have a Tidbyt and know how to do this...._
+I'm running a cron job on a Raspberry Pi that calls a script. The script does the following:
+1. Runs `$ pixlet render solarlife.star`
+2. Runs `$ pixlet push ......`
+
+This is run once a day at midnight to update the image on the Tidbyt. Once a day is good enough for this application since it's just showing lifetime totals. 
 
 ### SolarEdge data on Twitter?
 See my other project, [solar3](https://github.com/jasondborneman/solar3)!
