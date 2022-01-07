@@ -139,29 +139,29 @@ def main():
                             )
                         ],
                     ),
-                    render.Column(
-                        main_align="space_around", # Controls horizontal alignment
-                        cross_align="center", # Controls vertical alignment
-                        children = [
-                            render.Box(
-                                        width = 16,
-                                        height = 16,
-                                        child = render.Image(src=TREE_IMG),
-                            ),
-                            render.Box(
-                                render.Row(
-                                    expanded=False,
-                                    main_align="space_evenly",
-                                    cross_align="center",
-                                    children = [
-                                        render.Row(
-                                            children = [render.Text("{} Acres".format(tree_acres))]
-                                        )
-                                    ]
-                                )
-                            )
-                        ],
-                    ),
+#                    render.Column(
+#                        main_align="space_around", # Controls horizontal alignment
+#                        cross_align="center", # Controls vertical alignment
+#                        children = [
+#                            render.Box(
+#                                        width = 16,
+#                                        height = 16,
+#                                        child = render.Image(src=TREE_IMG),
+#                           ),
+#                            render.Box(
+#                                render.Row(
+#                                    expanded=False,
+#                                    main_align="space_evenly",
+#                                    cross_align="center",
+#                                    children = [
+#                                        render.Row(
+#                                            children = [render.Text("{} Acres".format(tree_acres))]
+#                                        )
+#                                    ]
+#                                )
+#                            )
+#                        ],
+#                    ),
                 ]
             )
         ),
