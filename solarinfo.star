@@ -2,8 +2,8 @@ load("render.star", "render")
 load("http.star", "http")
 load("encoding/base64.star", "base64")
 
-SOLAR_API_KEY = "<SOLAR API KEY>"
-SOLAR_SITE_ID = "<SOLAR SITE ID>"
+SOLAR_API_KEY = "H3OXSS0RJK96YR3AORCAOCIO2IDMC1HM"
+SOLAR_SITE_ID = "1428206"
 
 SOLAR_SITE_OVERVIEW_URL = "https://monitoringapi.solaredge.com/site/%s/overview?api_key=%s" % (SOLAR_SITE_ID, SOLAR_API_KEY)
 SOLAR_SITE_INFO_URL = "https://monitoringapi.solaredge.com/site/%s/details.json?api_key=%s" % (SOLAR_SITE_ID, SOLAR_API_KEY)
@@ -139,29 +139,29 @@ def main():
                             )
                         ],
                     ),
-                    render.Column(
-                        main_align="space_around", # Controls horizontal alignment
-                        cross_align="center", # Controls vertical alignment
-                        children = [
-                            render.Box(
-                                        width = 16,
-                                        height = 16,
-                                        child = render.Image(src=TREE_IMG),
-                            ),
-                            render.Box(
-                                render.Row(
-                                    expanded=False,
-                                    main_align="space_evenly",
-                                    cross_align="center",
-                                    children = [
-                                        render.Row(
-                                            children = [render.Text("{} Acres".format(tree_acres))]
-                                        )
-                                    ]
-                                )
-                            )
-                        ],
-                    ),
+#                    render.Column(
+#                        main_align="space_around", # Controls horizontal alignment
+#                        cross_align="center", # Controls vertical alignment
+#                        children = [
+#                            render.Box(
+#                                        width = 16,
+#                                        height = 16,
+#                                        child = render.Image(src=TREE_IMG),
+#                           ),
+#                            render.Box(
+#                                render.Row(
+#                                    expanded=False,
+#                                    main_align="space_evenly",
+#                                    cross_align="center",
+#                                    children = [
+#                                        render.Row(
+#                                            children = [render.Text("{} Acres".format(tree_acres))]
+#                                        )
+#                                    ]
+#                                )
+#                            )
+#                        ],
+#                    ),
                 ]
             )
         ),

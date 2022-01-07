@@ -26,6 +26,8 @@ My calculation is...
 
 I think
 
+**Update:** I've commented out the creation of this frame in the animation. It's hovering around 5.08 acres but going up and *down* which isn't right. I need to revisit my math. Until then it's removed.
+
 ## Deploying to your Tidbyt
 I'm running a cron job on a Raspberry Pi that calls a script. The script does the following:
 1. Runs `$ pixlet render solarlife.star`
